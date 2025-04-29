@@ -1,0 +1,62 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]  # Set a branch name to trigger deployment
+  workflow_dispatch:  # Allow manual triggering
+
+permissions:
+  contents: write  # Changed to write to enable direct commits
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v3
+
+      - name: Create CNAME file
+        run: echo "witherco.xyz" > CNAME
+
+      - name: Create .nojekyll file
+        run: touch .nojekyll
+        
+      - name: Copy client directory to root
+        run: |
+          # Create 404.html for client-side routing
+          cp client/index.html 404.html
+          
+          # Move static assets to the root
+          mkdir -p static
+          cp -a client/public/* .
+          
+          # Create a simple script to redirect to client/index.html
+          cat > index.html << 'EOF'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <meta http-equiv="refresh" content="0;url=./client/">
+              <title>WitherCo - Link in Bio</title>
+          </head>
+          <body>
+              <p>Redirecting to <a href="./client/">WitherCo Link in Bio</a>...</p>
+              <p>Created by WitherCoDev</p>
+          </body>
+          </html>
+          EOF
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add -A
+          git commit -m "Deploy to GitHub Pages"
+          git push

@@ -1,0 +1,101 @@
+[
+  {
+    "username": "wither",
+    "displayName": "Wither Co",
+    "bio": "Welcome to my collection of links. Follow me for updates on witherco.xyz!",
+    "links": [
+      {
+        "id": 1,
+        "title": "Website",
+        "url": "https://witherco.xyz",
+        "icon": "globe"
+      },
+      {
+        "id": 2,
+        "title": "YouTube",
+        "url": "https://youtube.com",
+        "icon": "youtube"
+      },
+      {
+        "id": 3,
+        "title": "Twitter",
+        "url": "https://twitter.com",
+        "icon": "twitter"
+      },
+      {
+        "id": 4,
+        "title": "Instagram",
+        "url": "https://instagram.com",
+        "icon": "instagram"
+      },
+      {
+        "id": 5,
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/witherco",
+        "icon": "linkedin"
+      }
+    ]
+  },
+  {
+    "username": "design",
+    "displayName": "Design Studio",
+    "bio": "Design resources, inspiration, and tools for modern creatives.",
+    "links": [
+      {
+        "id": 1,
+        "title": "Portfolio",
+        "url": "https://witherco.xyz/design",
+        "icon": "image"
+      },
+      {
+        "id": 2,
+        "title": "Dribbble",
+        "url": "https://dribbble.com",
+        "icon": "dribbble"
+      },
+      {
+        "id": 3,
+        "title": "Behance",
+        "url": "https://behance.net",
+        "icon": "behance"
+      },
+      {
+        "id": 4,
+        "title": "Design Resources",
+        "url": "https://witherco.xyz/resources",
+        "icon": "folder"
+      }
+    ]
+  },
+  {
+    "username": "tech",
+    "displayName": "Tech Solutions",
+    "bio": "Providing cutting-edge technology solutions for modern businesses.",
+    "links": [
+      {
+        "id": 1,
+        "title": "Services",
+        "url": "https://witherco.xyz/services",
+        "icon": "server"
+      },
+      {
+        "id": 2,
+        "title": "GitHub",
+        "url": "https://github.com",
+        "icon": "github"
+      },
+      {
+        "id": 3,
+        "title": "LinkedIn",
+        "url": "https://linkedin.com",
+        "icon": "linkedin"
+      },
+      {
+        "id": 4,
+        "title": "Contact",
+        "url": "https://witherco.xyz/contact",
+        "icon": "mail"
+      }
+    ]
+  }
+]
